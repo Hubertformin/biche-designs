@@ -1,0 +1,79 @@
+@import "responsive";
+
+.cart-list {
+  .media-phone({
+    width: 100vw;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 10px 20px 10px 20px;
+  });
+  .media-gt-phone({
+    max-height: 250px;
+    overflow-y: auto;
+  });
+}
+.cart-list-item {
+  display: flex;
+  margin-bottom: 1.15rem;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 0.1rem;
+  .media-phone({
+    width: 75vw;
+    // box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    background: #f1f1f1;
+    border: none;
+    padding: 10px;
+    display: inline-flex;
+    margin: 0 10px 0 0;
+  });
+  .img-container {
+    height: 45px;
+    width: 45px;
+    position: relative;
+    .indicator {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      height: 20px;
+      width: 20px;
+      font-size: 13px;
+      display: flex;
+      background: #eee;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      .media-phone({
+        background: #fff;
+      });
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+  .details {
+    padding: 0 15px;
+    .name {
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+    .price {
+      color: #999;
+    }
+  }
+}
+
+.paypal-section {
+  position: relative;
+  min-height: 350px;
+}
+
+.paypal-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

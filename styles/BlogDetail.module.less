@@ -1,0 +1,42 @@
+@import "responsive";
+.cover-image {
+  height: 60vh;
+  background-color: #2B2B2B;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.article-body {
+  max-width: 1080px;
+  margin: auto;
+  width: 100%;
+  padding: 1.5rem;
+  .media-gt-tablet({
+    padding: 1.75rem;
+    width: 60vw;
+  });
+  .article-meta {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 3.75rem;
+    .date {
+      font-size: 15px;
+    }
+    .share {
+      small {
+        display: block;
+      }
+      .icon {
+        font-size: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .text {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,59 @@
+@import "responsive";
+
+.image-section {
+  // display: flex;
+  justify-content: center;
+  img.view-img {
+    height: 300px;
+    margin: 0;
+    width: 300px;
+    max-height: 100%;
+  }
+  .image-options {
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px;
+    grid-column-gap: 5px;
+    .image-con {
+      background-color: black;
+      cursor: pointer;
+      height: 70px;
+      &.active {
+        border: 2px solid #FB8710;
+        border-radius: 4px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.details-section {
+  .name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .price {
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
+.actions {
+  button {
+    width: 100%;
+    .media-gt-phone({
+      width: 300px;
+    });
+  }
+}
+
+.share {
+  .icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 25px;
+  }
+}

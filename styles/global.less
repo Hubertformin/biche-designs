@@ -1,0 +1,59 @@
+@import "grid";
+@import "utils";
+@import "responsive";
+
+
+.admin-content {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+main {
+  max-width: 1080px;
+  margin: auto;
+  .rwd(1081px, {
+    width: 75vw;
+  })
+}
+#page-body, main {
+  margin-top: 75px;
+  .media-gt-phone({
+    margin-top: 107px;
+  })
+}
+
+.inline-on-sm {
+  display: inline-block;
+  .media-gt-phone({
+    display: none;
+  })
+}
+.inline-on-md {
+  display: none;
+  .media-gt-phone({
+    display: inline-block;
+  })
+}
+.block-on-sm {
+  display: block;
+  .media-gt-phone({
+    display: none;
+  })
+}
+.block-on-md {
+  display: none;
+  .media-gt-phone({
+    display: block;
+  })
+}
+
+.center-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ck.ck-editor__main>.ck-editor__editable {min-height: 150px !important}

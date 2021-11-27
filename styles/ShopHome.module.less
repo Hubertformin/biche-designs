@@ -1,0 +1,137 @@
+@import "responsive";
+
+.body {
+  padding-top: 2.5rem;
+  // height: 100%;
+  .media-gt-tablet({
+    display: grid;
+    grid-template-columns: 300px auto;
+  });
+
+}
+.categories-panel {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-right: 15px;
+  .media-gt-phone({
+    padding-top: 2.75rem;
+    position: fixed;
+    z-index: -1;
+    top: 20%;
+  });
+  ul {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    .media-gt-phone({
+      white-space: normal;
+    });
+    li{
+      display: inline-block;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 50px;
+      margin-right: 10px;
+      .media-gt-phone({
+        list-style-type: none;
+        display: block;
+        background-color: white;
+        padding: 10px;
+        cursor: pointer;
+        margin-right: 0;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.12);
+        }
+      })
+    }
+  }
+}
+.items-panel {
+  // height: 100%;
+  // overflow-x: hidden;
+  // overflow-y: auto;
+  .media-desktop({
+    grid-template-columns: 300px 300px 300px 300px;
+    margin-left: 300px;
+  });
+}
+/*items*/
+.items {
+  padding: 2rem 0 1rem;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 85px;
+  grid-column-gap: 25px;
+  .media-gt-phone({
+    padding: 8rem 1.5rem 1rem;
+  });
+  .media-tablet({
+    grid-template-columns: 250px 250px 250px;
+  });
+  .media-desktop({
+    grid-template-columns: 300px 300px 300px 300px;
+  });
+}
+.item-card {
+  // width: 235px;
+  .image-container {
+    // width: 235px;
+    height: 257px;
+    background: #eeee;
+    overflow: hidden;
+    border-radius: 4px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease-out;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .footer {
+    padding: 5px 7px;
+    .item-name {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .price-container {
+      display: flex;
+      padding: 5px 0;
+      .price {
+        margin: 0 5px;
+        font-size: 15px;
+        &.discount {
+          text-decoration: line-through;
+          color: #a7a7a7;
+        }
+      }
+    }
+    button {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.skeleton_image_container, .skeleton_text {
+  width: 350px;
+  .media-tablet({
+    width: 250px;
+  });
+  .media-desktop({
+    width: 300px;
+  });
+}

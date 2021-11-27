@@ -1,0 +1,66 @@
+@import "responsive";
+@import "utils";
+
+.book-body {
+  height: auto;
+  margin-top: 75px;
+  width: 100vw;
+  overflow-y: auto;
+  .media-gt-phone({
+    height: calc(100vh - 121px);
+    display: grid;
+    margin-top: 121px;
+    grid-template-columns: 40% 60%;
+  });
+  .image-section {
+    background-image: url("https://ik.imagekit.io/biche/v0/b/biche-designs.appspot.com/o/images%2Fabout-banner.jpg?alt=media&token=7456e12d-d0cb-4c59-8c6e-96b6e980159e");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 200px;
+    .media-gt-phone({
+      height: 100%;
+    });
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      color: white;
+      right: 0;
+      height: auto; // do not remove this attribute, else you it fill go to 10vh
+      left: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      flex-direction: column;
+    }
+  }
+  .form-section {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+}
+
+.book-form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
+}
+
+.form__step {
+  display: none;
+  transform: scale(0);
+  transition: all ease-out 0.4s;
+  &.display {
+    transform: scale(1);
+    display: block;
+  }
+}
+

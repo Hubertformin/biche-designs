@@ -1,0 +1,39 @@
+@toolbar-height: 60px;
+
+#toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: @toolbar-height;
+  right: 0;
+  padding: 15px;
+  border-bottom: 1px solid #d9d9d9;
+  .logo {
+    text-align: center;
+    max-width: 150px;
+  }
+  .brand {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+#side-nav {
+  position: fixed;
+  top: @toolbar-height;
+  bottom: 0;
+  left: 0;
+  width: 256px;
+  transition: 0.3s linear;
+}
+#section__body {
+  position: fixed;
+  top: @toolbar-height;
+  bottom: 0;
+  left: 257px;
+  overflow-y: auto;
+  background: #f2f2f2f2;
+  padding: 7px;
+  right: 0;
+  transition: 0.3s linear;
+}
